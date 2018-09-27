@@ -1,10 +1,12 @@
 const places = [];
 
-const coordinator = {
+module.exports = {
+  places,
+
   addPlace: (city, country) => {
-    const id = places.length + 1;
+    const id = ++places.length;
     let numType = 'odd';
-    if(id % 2 === 0){
+    if(id % 2){
       numType = 'even';
     }
 
@@ -13,6 +15,6 @@ const coordinator = {
     })
   }
 }
-coordinator.addPlace('Yishun', 'Singapore');
 
-console.log(places);
+//addPlace('Yishun', 'Singapore');
+//console.log(places);
